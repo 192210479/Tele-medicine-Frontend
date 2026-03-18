@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="44dp"
+    android:layout_columnWeight="1"
+    android:gravity="center"
+    android:background="@drawable/slot_selector"
+    android:textColor="@drawable/slot_text_selector"
+    android:textSize="13sp"
+    android:layout_margin="4dp"
+    android:elevation="0dp" />

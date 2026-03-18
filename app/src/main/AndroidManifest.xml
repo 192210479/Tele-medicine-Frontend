@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".TMApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TMApp"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Onboarding1Activity" android:exported="false" />
+        <activity android:name=".Onboarding2Activity" android:exported="false" />
+        <activity android:name=".Onboarding3Activity" android:exported="false" />
+        <activity android:name=".AuthWelcomeActivity" android:exported="false" />
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".ResetPasswordActivity" android:exported="false" />
+        <activity android:name=".CheckEmailActivity" android:exported="false" />
+        <activity android:name=".CreateAccountRoleActivity" android:exported="false" />
+        <activity android:name=".CreateAccountDetailsActivity" android:exported="false" />
+        <activity android:name=".CreateDoctorDetailsActivity" android:exported="false" />
+        <activity android:name=".PatientDashboardActivity" android:exported="false" />
+        <activity android:name=".EmergencyHelpActivity" android:exported="false" />
+        <activity android:name=".SelectDoctorActivity" android:exported="false" />
+        <activity android:name=".DoctorProfileActivity" android:exported="false" />
+        <activity android:name=".SelectTimeActivity" android:exported="false" />
+        <activity android:name=".BookingConfirmedActivity" android:exported="false" />
+        <activity android:name=".ConsultationHistoryActivity" android:exported="false" />
+        <activity android:name=".ProfileActivity" android:exported="false" />
+        <activity android:name=".PrescriptionReadyActivity" android:exported="false" />
+        <activity android:name=".PrescriptionWaitingActivity" android:exported="false" />
+        
+        <activity android:name=".UpcomingAppointmentsActivity" android:exported="false" />
+        <activity android:name=".ConsultationWaitingActivity" android:exported="false" />
+        <activity android:name=".ConsultationReadyActivity" android:exported="false" />
+        <activity android:name=".PatientVideoCallActivity" android:exported="false" />
+        <activity android:name=".ChatActivity" android:exported="false" />
+        <activity android:name=".UploadReportsActivity" android:exported="false" />
+        <activity android:name=".PrescriptionCreatingActivity" android:exported="false" />
+        <activity android:name=".PrescriptionDetailsActivity" android:exported="false" />
+        <activity android:name=".IncomingConsultationActivity" android:exported="false" android:launchMode="singleTop" />
+        <activity android:name=".AppointmentsActivity" android:exported="false" />
+        
+        <activity android:name=".PrescriptionActivity" android:exported="false" />
+        <activity android:name=".PatientPrescriptionActivity" android:exported="false" />
+        <activity android:name=".MedicationRemindersActivity" android:exported="false" />
+        <activity android:name=".NotificationsActivity" android:exported="false" />
+        <activity android:name=".EditProfileActivity" android:exported="false" />
+        <activity android:name=".PaymentsActivity" android:exported="false" />
+        <activity android:name=".PrivacyActivity" android:exported="false" />
+        <activity android:name=".ChangePasswordActivity" android:exported="false" />
+        <activity android:name=".LoginHistoryActivity" android:exported="false" />
+        <activity android:name=".DeviceManagementActivity" android:exported="false" />
+        <activity android:name=".DataPrivacyActivity" android:exported="false" />
+        <activity android:name=".DeleteAccountActivity" android:exported="false" />
+        <activity android:name=".AboutAppActivity" android:exported="false" />
+        <activity android:name=".MedicalRecordsActivity" android:exported="false" />
+        
+        <!-- Doctor Module Activities -->
+        <activity android:name=".DoctorDashboardActivity" android:exported="false" />
+        <activity android:name=".PatientProfileActivity" android:exported="false" />
+        <activity android:name=".DoctorProfileSettingsActivity" android:exported="false" />
+        <activity android:name=".EditDoctorProfileActivity" android:exported="false" />
+        <activity android:name=".DoctorAppointmentsActivity" android:exported="false" />
+        <activity android:name=".HelpSupportActivity" android:exported="false" />
+        <activity android:name=".NewPrescriptionActivity" android:exported="false" />
+        <activity android:name=".ManualPrescriptionEntryActivity" android:exported="false" />
+        <activity android:name=".AdminDashboardActivity" android:exported="false" />
+        <activity android:name=".DoctorApprovalActivity" android:exported="false" />
+        <activity android:name=".AdminProfileActivity" android:exported="false" />
+        <activity android:name=".AdminEditProfileActivity" android:exported="false" />
+        <activity android:name=".DoctorAvailabilityActivity" android:exported="false" />
+        <activity android:name=".AdminAppointmentsActivity" android:exported="false" />
+
+
+        <receiver android:name=".ReminderReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.simats.tmapp.ACTION_REMINDER" />
+                <action android:name="com.simats.tmapp.ACTION_MARK_TAKEN" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".SnoozeReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.simats.tmapp.ACTION_SNOOZE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".PatientDataActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DoctorVideoCallActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UploadReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReportViewerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DoctorPatientsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".CreateSlotActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".VideoConsultationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".CreatePrescriptionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".AppointmentDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ShareMedicalRecordsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".PrescriptionListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewPrescriptionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DoctorPatientRecordsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DoctorRecordViewerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

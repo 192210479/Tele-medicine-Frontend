@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp">
+
+    <!-- Header -->
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_arrow_back"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_account"
+        android:textColor="@color/text_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/ivBack"
+        app:layout_constraintBottom_toBottomOf="@id/ivBack"
+        app:layout_constraintStart_toEndOf="@id/ivBack"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Progress bar mock -->
+    <LinearLayout
+        android:id="@+id/llProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ivBack">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_circle_soft_blue"
+            android:backgroundTint="@color/primary_blue"
+            android:layout_marginEnd="4dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_circle_soft_blue"
+            android:backgroundTint="#E2E8F0"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_your_role"
+        android:textColor="@color/text_dark"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/llProgress"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_role_desc"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Roles List -->
+    <LinearLayout
+        android:id="@+id/llRolesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc">
+
+        <!-- Patient Unselected -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPatient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_unselected"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/ivRadioPatient"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_radio_unselected"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/ivIconPatient"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_user"
+                app:tint="@color/text_dark"
+                app:layout_constraintTop_toTopOf="@id/tvRolePatient"
+                app:layout_constraintBottom_toBottomOf="@id/tvRolePatient"
+                app:layout_constraintStart_toEndOf="@id/ivRadioPatient"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:id="@+id/tvRolePatient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/patient"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivIconPatient"
+                android:layout_marginStart="12dp"/>
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/patient_desc"
+                android:textColor="@color/text_grey"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/tvRolePatient"
+                app:layout_constraintStart_toStartOf="@id/tvRolePatient"
+                android:layout_marginTop="4dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Doctor Selected -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_selected"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/ivRadioDoctor"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_radio_selected"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/ivIconDoctor"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_stethoscope_gray"
+                app:tint="@color/text_dark"
+                app:layout_constraintTop_toTopOf="@id/tvRoleDoctor"
+                app:layout_constraintBottom_toBottomOf="@id/tvRoleDoctor"
+                app:layout_constraintStart_toEndOf="@id/ivRadioDoctor"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:id="@+id/tvRoleDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/doctor"
+                android:textColor="@color/primary_blue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivIconDoctor"
+                android:layout_marginStart="12dp"/>
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/doctor_desc"
+                android:textColor="@color/text_grey"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/tvRoleDoctor"
+                app:layout_constraintStart_toStartOf="@id/tvRoleDoctor"
+                android:layout_marginTop="4dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/continue_text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:backgroundTint="@color/primary_blue"
+        app:cornerRadius="12dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/llRolesList"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

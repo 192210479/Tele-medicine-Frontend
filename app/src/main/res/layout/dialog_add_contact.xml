@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_white"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_marginHorizontal="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Emergency Contact"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_dark"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:textColor="@color/text_grey"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etContactName"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_rounded_border"
+        android:hint="e.g. John Doe"
+        android:paddingHorizontal="16dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:inputType="textPersonName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textColor="@color/text_grey"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etContactPhone"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_rounded_border"
+        android:hint="+1 234 567 8900"
+        android:paddingHorizontal="16dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"
+        android:maxLength="10"
+        android:inputType="phone|number"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="Cancel"
+            android:textColor="@color/text_dark"
+            android:textAllCaps="false"
+            app:backgroundTint="#F8FAFC"
+            app:cornerRadius="12dp"
+            android:layout_marginEnd="8dp"
+            app:strokeWidth="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddContact"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="Add Contact"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/primary_blue"
+            app:cornerRadius="12dp"
+            android:layout_marginStart="8dp"
+            app:strokeWidth="0dp"/>
+    </LinearLayout>
+</LinearLayout>

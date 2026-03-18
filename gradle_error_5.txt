@@ -1,0 +1,288 @@
+﻿> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:generateDebugRFile UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :app:mergeLibDexDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+
+> Task :app:compileDebugKotlin FAILED
+./gradlew : e: file:///C:/Use
+rs/krish/AndroidStudioProject
+s/TMApp/app/src/main/java/com
+/simats/tmapp/DoctorDashboard
+Activity.kt:20:39 Unresolved 
+reference 
+'WaitingRoomActivity'.
+At line:1 char:63
++ ... oid Studio\jbr"; 
+./gradlew assembleDebug 
+--console=plain 2>&1 | Out-F 
+...
++                      ~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (e: file  
+  :///C:/U...gRoomActivity   
+ '.:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/DoctorDashboardActivity.kt:
+20:66 Cannot infer type for 
+this parameter. Specify it 
+explicitly.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/DoctorDashboardActivity.kt:
+20:66 Unresolved reference. 
+None of the following 
+candidates is applicable 
+because of a receiver type 
+mismatch:
+val <T> KClass<T>.java: 
+Class<T>
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/DoctorDashboardActivity.kt:
+26:39 Unresolved reference 
+'WaitingRoomActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/DoctorDashboardActivity.kt:
+26:66 Cannot infer type for 
+this parameter. Specify it 
+explicitly.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/DoctorDashboardActivity.kt:
+26:66 Unresolved reference. 
+None of the following 
+candidates is applicable 
+because of a receiver type 
+mismatch:
+val <T> KClass<T>.java: 
+Class<T>
+
+> Task :app:processDebugResources FAILED
+
+FAILURE: Build completed 
+with 2 failures.
+
+1: Task failed with an 
+exception.
+-----------
+* What went wrong:
+Execution failed for task 
+':app:compileDebugKotlin'.
+> A failure occurred while 
+executing org.jetbrains.kotli
+n.compilerRunner.GradleCompil
+erRunnerWithWorkers$GradleKot
+linCompilerWorkAction
+   > Compilation error. See 
+log for more details
+
+* Try:
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --info or --debug 
+option to get more log 
+output.
+> Run with --scan to 
+generate a Build Scan 
+(Powered by Develocity).
+> Get more help at 
+https://help.gradle.org.
+=============================
+=============================
+====================
+
+2: Task failed with an 
+exception.
+-----------
+* What went wrong:
+Execution failed for task 
+':app:processDebugResources'.
+> A failure occurred while 
+executing com.android.build.g
+radle.internal.res.LinkApplic
+ationAndroidResourcesTask$Tas
+kAction
+   > Android resource 
+linking failed
+     com.simats.tmapp-main-37
+:/drawable/ic_users_group_plu
+s_blue.xml:20: error: 
+attribute android:cx not 
+found.
+     com.simats.tmapp-main-37
+:/drawable/ic_users_group_plu
+s_blue.xml:20: error: 
+attribute android:cy not 
+found.
+     com.simats.tmapp-main-37
+:/drawable/ic_users_group_plu
+s_blue.xml:20: error: 
+attribute android:r not 
+found.
+     com.simats.tmapp-main-37
+:/drawable/ic_video_white.xml
+:22: error: attribute 
+android:rx not found.
+     com.simats.tmapp-main-37
+:/drawable/ic_video_white.xml
+:22: error: '10' is 
+incompatible with attribute 
+height (attr) dimension.
+     com.simats.tmapp-main-37
+:/drawable/ic_video_white.xml
+:22: error: '3' is 
+incompatible with attribute 
+x (attr) dimension.
+     com.simats.tmapp-main-37
+:/drawable/ic_video_white.xml
+:22: error: '12' is 
+incompatible with attribute 
+width (attr) dimension.
+     com.simats.tmapp-main-37
+:/drawable/ic_video_white.xml
+:22: error: '7' is 
+incompatible with attribute 
+y (attr) dimension.
+     com.simats.tmapp-main-37
+:/layout/activity_doctor_dash
+board.xml:26: error: 
+resource 
+style/CircleImageView (aka co
+m.simats.tmapp:style/CircleIm
+ageView) not found.
+     com.simats.tmapp-main-37
+:/layout/activity_doctor_dash
+board.xml:76: error: 
+resource 
+drawable/bg_circle_red (aka c
+om.simats.tmapp:drawable/bg_c
+ircle_red) not found.
+     com.simats.tmapp-main-37
+:/layout/activity_doctor_dash
+board.xml:95: error: 
+resource 
+drawable/bg_circle_green 
+(aka com.simats.tmapp:drawabl
+e/bg_circle_green) not found.
+     com.simats.tmapp-main-37
+:/layout/activity_doctor_dash
+board.xml:162: error: 'auto' 
+is incompatible with 
+attribute 
+layout_marginBottom (attr) 
+dimension.
+     com.simats.tmapp-main-37
+:/layout/activity_doctor_dash
+board.xml:210: error: 'auto' 
+is incompatible with 
+attribute 
+layout_marginBottom (attr) 
+dimension.
+     com.simats.tmapp-main-37
+:/layout/activity_doctor_prof
+ile_settings.xml:31: error: 
+resource 
+style/CircleImageView (aka co
+m.simats.tmapp:style/CircleIm
+ageView) not found.
+     com.simats.tmapp-main-37
+:/layout/activity_doctor_prof
+ile_settings.xml:37: error: 
+resource 
+drawable/bg_circle_blue (aka 
+com.simats.tmapp:drawable/bg_
+circle_blue) not found.
+     com.simats.tmapp-main-37
+:/layout/activity_doctor_prof
+ile_settings.xml:355: error: 
+resource drawable/ic_moon 
+(aka com.simats.tmapp:drawabl
+e/ic_moon) not found.
+     com.simats.tmapp-main-37
+:/layout/activity_edit_doctor
+_profile.xml:75: error: 
+resource 
+style/CircleImageView (aka co
+m.simats.tmapp:style/CircleIm
+ageView) not found.
+     com.simats.tmapp-main-37
+:/layout/activity_edit_doctor
+_profile.xml:86: error: 
+resource 
+drawable/bg_circle_blue (aka 
+com.simats.tmapp:drawable/bg_
+circle_blue) not found.
+     com.simats.tmapp-main-37
+:/layout/activity_patient_pro
+file.xml:84: error: resource 
+style/Corner16ImageView (aka 
+com.simats.tmapp:style/Corner
+16ImageView) not found.
+     com.simats.tmapp-main-37
+:/layout/activity_patient_pro
+file.xml:391: error: 
+resource 
+drawable/bg_circle_blue (aka 
+com.simats.tmapp:drawable/bg_
+circle_blue) not found.
+
+
+* Try:
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --info or --debug 
+option to get more log 
+output.
+> Run with --scan to 
+generate a Build Scan 
+(Powered by Develocity).
+> Get more help at 
+https://help.gradle.org.
+=============================
+=============================
+====================
+
+BUILD FAILED in 2s
+27 actionable tasks: 2 executed, 25 up-to-date

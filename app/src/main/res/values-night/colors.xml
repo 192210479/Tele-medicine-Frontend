@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme Specific Semantic Colors (Dark Mode) -->
+    <color name="app_bg">#121212</color>
+    <color name="surface_bg">#1E1E1E</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#A0AEC0</color>
+    <color name="text_muted">#718096</color>
+    <color name="border_primary">#2D3748</color>
+    <color name="divider_soft">#1A202C</color>
+    
+    <!-- Secondary brand remains mostly same but adjusted for contrast -->
+    <item name="primary_blue_light" type="color">#1A365D</item>
+    <item name="primary_blue_faded" type="color">#4299E1</item>
+
+    <!-- Neutral Colors -->
+    <color name="text_dark">#F7FAFC</color>
+    <color name="text_grey">#A0AEC0</color>
+    <color name="text_light">#718096</color>
+    <color name="bg_light">#121212</color>
+    <color name="input_border">#2D3748</color>
+    <color name="divider_color">#1A202C</color>
+
+    <!-- Component Specific -->
+    <color name="dot_inactive">#2D3748</color>
+    <color name="role_card_bg_selected">#2A4365</color>
+    <color name="role_card_border_selected">#4299E1</color>
+    <color name="bg_badge_orange_light">#2D1F13</color>
+
+    <!-- Chat Dark Mode -->
+    <color name="chat_sent_bg">#1A365D</color>
+    <color name="chat_received_bg">#2D3748</color>
+
+</resources>

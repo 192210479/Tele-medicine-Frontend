@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme Specific Semantic Colors (Default/Light) -->
+    <color name="app_bg">#FFFFFF</color>
+    <color name="surface_bg">#F7F7F7</color>
+    <color name="text_primary">#222222</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_muted">#94A3B8</color>
+    <color name="border_primary">#E2E8F0</color>
+    <color name="divider_soft">#F1F5F9</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="layout_bg">#F7F9FC</color>
+    <color name="gradient_start">#3B82F6</color>
+    <color name="gradient_end">#2563EB</color>
+
+    <!-- Primary Palette -->
+    <color name="primary_blue">#2F6FED</color>
+    <color name="primary_blue_light">#EBF2FF</color>
+    <color name="primary_blue_faded">#8AB4F8</color>
+    <color name="secondary_teal">#26A69A</color>
+    <color name="dark_blue">#1E3A8A</color>
+
+    <!-- Neutral Colors -->
+    <color name="text_dark">#1E293B</color>
+    <color name="text_grey">#64748B</color>
+    <color name="text_light">#94A3B8</color>
+    <color name="bg_light">#F8FAFC</color>
+    <color name="input_border">#E2E8F0</color>
+    <color name="divider_color">#F1F5F9</color>
+
+    <!-- Status Colors -->
+    <color name="red_danger">#EF4444</color>
+    <color name="green_success">#10B981</color>
+    <color name="orange_warning">#F59E0B</color>
+    <color name="primary_red">#EF4444</color>
+    <color name="primary_green">#10B981</color>
+    <color name="primary_orange">#F59E0B</color>
+
+    <!-- Component Specific -->
+    <color name="dot_inactive">#E2E8F0</color>
+    <color name="role_card_bg_selected">#F0F7FF</color>
+    <color name="role_card_border_selected">#2F6FED</color>
+    <color name="bg_badge_orange_light">#FFF7ED</color>
+
+    <!-- Old colors (kept for compatibility) -->
+    <color name="primary_dark">#124CB6</color>
+    <color name="icon_bg_blue">#E2EEFF</color>
+    <color name="icon_bg_teal">#E0F5EB</color>
+    <color name="icon_teal">#26A69A</color>
+    <color name="dot_gray">#D1D5DB</color>
+    <color name="button_green">#26A69A</color>
+    <color name="card_bg_selected">#F0F8FF</color>
+    <color name="card_border_selected">#2F6FED</color>
+    <color name="light_gray_bg">#F1F5F9</color>
+    <color name="red_light">#FEE2E2</color>
+    <color name="orange_presc">#F97316</color>
+    <color name="purple_hist">#A855F7</color>
+    <color name="indigo_rec">#6366F1</color>
+    <color name="pink_remind">#EC4899</color>
+    <color name="star_yellow">#FBBF24</color>
+    <color name="star_bg">#FEF3C7</color>
+    <color name="gray_bg">#F8FAFC</color>
+    <color name="teal_bg">#26A69A</color>
+
+    <!-- Chat Message Bubbles -->
+    <color name="chat_sent_bg">#2F6FED</color>
+    <color name="chat_received_bg">#F1F5F9</color>
+</resources>

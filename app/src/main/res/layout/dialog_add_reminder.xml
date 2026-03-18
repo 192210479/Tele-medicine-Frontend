@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_white"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_marginHorizontal="20dp">
+
+    <!-- Dialog Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Add Reminder"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"/>
+        <ImageView
+            android:id="@+id/ivCloseAdd"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_plus"
+            android:rotation="45"
+            app:tint="@color/text_grey"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Form Fields -->
+    <!-- Medicine Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medicine Name"
+        android:textColor="@color/text_grey"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"/>
+    <EditText
+        android:id="@+id/etMedName"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_rounded_border"
+        android:hint="e.g. Paracetamol"
+        android:textColorHint="#94A3B8"
+        android:textColor="@color/text_dark"
+        android:paddingHorizontal="16dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Meal Timing Chips -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timing / Instruction"
+        android:textColor="@color/text_grey"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"/>
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cgMealTiming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:chipSpacingHorizontal="8dp"
+        android:layout_marginBottom="16dp">
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBeforeFood"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Before Food"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/input_border"
+            app:chipStrokeWidth="1dp"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAfterFood"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="After food"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/input_border"
+            app:chipStrokeWidth="1dp"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBeforeSleep"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Before sleep"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/input_border"
+            app:chipStrokeWidth="1dp"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Dosage & Time Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        
+        <!-- Dosage -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dosage"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+            <EditText
+                android:id="@+id/etDosage"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_rounded_border"
+                android:hint="500mg"
+                android:textColorHint="#94A3B8"
+                android:textColor="@color/text_dark"
+                android:paddingHorizontal="16dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Time -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+            <EditText
+                android:id="@+id/etTime"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_rounded_border"
+                android:textColor="@color/text_dark"
+                android:paddingHorizontal="16dp"
+                android:textSize="16sp"
+                android:focusable="false"
+                android:clickable="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="Cancel"
+            android:textColor="@color/text_dark"
+            android:textAllCaps="false"
+            app:backgroundTint="#F8FAFC"
+            app:cornerRadius="12dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="0dp"
+            app:strokeWidth="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddMedicine"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="56dp"
+            android:text="Add Medicine"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/primary_blue"
+            app:cornerRadius="12dp"
+            android:layout_marginStart="8dp"
+            android:elevation="0dp"
+            app:strokeWidth="0dp"/>
+    </LinearLayout>
+</LinearLayout>

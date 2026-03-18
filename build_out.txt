@@ -1,0 +1,628 @@
+﻿> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:generateDebugRFile UP-TO-DATE
+
+> Task :app:compileDebugKotlin FAILED
+.\gradlew.bat : e: file:///C:
+/Users/krish/AndroidStudioPro
+jects/TMApp/app/src/main/java
+/com/simats/tmapp/AdminProfil
+eActivity.kt:9:30 Unresolved 
+reference 
+'AppCompatActivity'.
+At line:1 char:1
++ .\gradlew.bat 
+:app:compileDebugKotlin 
+--console=plain 2>&1 | 
+Out-File ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo           
+   : NotSpecified: (e: file  
+  :///C:/U...ompatActivity   
+ '.:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:10:
+45 Property delegate must 
+have a 'getValue(AdminProfile
+Activity, KProperty1<AdminPro
+fileActivity, 
+ProfileViewModel>)' method. 
+None of the following 
+functions is applicable:
+fun <T> 
+Lazy<T>.getValue(thisRef: 
+Any?, property: 
+KProperty<*>): T
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:10:
+48 Cannot infer type for 
+this parameter. Specify it 
+explicitly.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:10:
+48 Unresolved reference. 
+None of the following 
+candidates is applicable 
+because of a receiver type 
+mismatch:
+fun <reified VM : ViewModel> 
+ComponentActivity.viewModels(
+noinline extrasProducer: (() 
+-> CreationExtras)? = ..., 
+noinline factoryProducer: 
+(() -> 
+ViewModelProvider.Factory)? 
+= ...): Lazy<VM>
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:10:
+48 Cannot infer type for 
+this parameter. Specify it 
+explicitly.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:16:
+5 'onCreate' overrides 
+nothing.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:17:
+9 Unresolved reference 
+'AppCompatActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:17:
+15 Unresolved reference 
+'onCreate'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:18:
+9 Unresolved reference 
+'setContentView'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:20:
+53 Argument type mismatch: 
+actual type is 
+'AdminProfileActivity', but 
+'Context' was expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:22:
+20 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:23:
+22 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:24:
+23 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:29:
+26 None of the following 
+candidates is applicable:
+constructor(p0: Context!, 
+p1: Class<*>!): Intent
+constructor(p0: String!, p1: 
+Uri!): Intent
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:30:
+20 Unresolved reference 
+'flags'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:31:
+13 Unresolved reference 
+'startActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:32:
+13 Unresolved reference 
+'finish'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:36:
+29 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:37:
+26 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:38:
+31 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:39:
+25 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:40:
+31 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:41:
+29 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:42:
+26 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:43:
+28 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:44:
+26 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:45:
+24 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:48:
+19 Unresolved reference 
+'startActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:48:
+33 None of the following 
+candidates is applicable:
+constructor(p0: Context!, 
+p1: Class<*>!): Intent
+constructor(p0: String!, p1: 
+Uri!): Intent
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:52:
+19 Unresolved reference 
+'startActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:52:
+33 None of the following 
+candidates is applicable:
+constructor(p0: Context!, 
+p1: Class<*>!): Intent
+constructor(p0: String!, p1: 
+Uri!): Intent
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:56:
+19 Unresolved reference 
+'startActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:56:
+33 None of the following 
+candidates is applicable:
+constructor(p0: Context!, 
+p1: Class<*>!): Intent
+constructor(p0: String!, p1: 
+Uri!): Intent
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:60:
+19 Unresolved reference 
+'startActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:60:
+33 None of the following 
+candidates is applicable:
+constructor(p0: Context!, 
+p1: Class<*>!): Intent
+constructor(p0: String!, p1: 
+Uri!): Intent
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:64:
+19 Unresolved reference 
+'startActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:64:
+33 None of the following 
+candidates is applicable:
+constructor(p0: Context!, 
+p1: Class<*>!): Intent
+constructor(p0: String!, p1: 
+Uri!): Intent
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:68:
+19 Unresolved reference 
+'startActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:68:
+33 None of the following 
+candidates is applicable:
+constructor(p0: Context!, 
+p1: Class<*>!): Intent
+constructor(p0: String!, p1: 
+Uri!): Intent
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:72:
+19 Unresolved reference 
+'startActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:72:
+33 None of the following 
+candidates is applicable:
+constructor(p0: Context!, 
+p1: Class<*>!): Intent
+constructor(p0: String!, p1: 
+Uri!): Intent
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:76:
+34 None of the following 
+candidates is applicable:
+static fun makeText(p0: 
+Context!, p1: Int, p2: Int): 
+Toast!
+static fun makeText(p0: 
+Context!, p1: CharSequence!, 
+p2: Int): Toast!
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:76:
+118 Unresolved reference 
+'show'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:80:
+19 Unresolved reference 
+'startActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:80:
+33 None of the following 
+candidates is applicable:
+constructor(p0: Context!, 
+p1: Class<*>!): Intent
+constructor(p0: String!, p1: 
+Uri!): Intent
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:83:
+26 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:84:
+30 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:90:
+50 Cannot infer type for 
+this parameter. Specify it 
+explicitly.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:90:
+53 Cannot infer type for 
+this parameter. Specify it 
+explicitly.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:95:
+27 Unresolved reference 
+'findViewById'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:97:
+51 Cannot infer type for 
+this parameter. Specify it 
+explicitly.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:97:
+54 Cannot infer type for 
+this parameter. Specify it 
+explicitly.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:104
+:35 Argument type mismatch: 
+actual type is 
+'AdminProfileActivity', but 
+'LifecycleOwner' was 
+expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:121
+:9 Argument type mismatch: 
+actual type is 'R? (of fun 
+<T, R> T.let)', but 'K? (of 
+fun <K> ELVIS_CALL)' was 
+expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:121
+:41 Cannot infer type for 
+this parameter. Specify it 
+explicitly.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:123
+:17 Argument type mismatch: 
+actual type is 'K#1 (of fun 
+<K> TRY_CALL)', but 'K#2 (of 
+fun <K> WHEN_CALL)' was 
+expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:125
+:21 Unresolved reference 
+'contentResolver'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:125
+:21 Argument type mismatch: 
+actual type is 'R? (of fun 
+<T : Closeable?, R> T.use)', 
+but 'K? (of fun <K> 
+ELVIS_CALL)' was expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:125
+:21 Argument type mismatch: 
+actual type is 'K#1 (of fun 
+<K> ELVIS_CALL)', but 'K#2 
+(of fun <K> TRY_CALL)' was 
+expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:125
+:59 Cannot infer type for 
+this parameter. Specify it 
+explicitly.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:125
+:65 Cannot infer type for 
+this parameter. Specify it 
+explicitly.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:132
+:26 Argument type mismatch: 
+actual type is 'Unit?', but 
+'K (of fun <K> ELVIS_CALL)' 
+was expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:136
+:21 Argument type mismatch: 
+actual type is 'Unit?', but 
+'K (of fun <K> TRY_CALL)' 
+was expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:139
+:17 Argument type mismatch: 
+actual type is 'Unit?', but 
+'K (of fun <K> WHEN_CALL)' 
+was expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:141
+:14 Argument type mismatch: 
+actual type is 'Unit?', but 
+'K (of fun <K> ELVIS_CALL)' 
+was expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:146
+:5 'onResume' overrides 
+nothing.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:147
+:9 Unresolved reference 
+'AppCompatActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:147
+:15 Unresolved reference 
+'onResume'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:153
+:41 Argument type mismatch: 
+actual type is 
+'AdminProfileActivity', but 
+'Context' was expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:171
+:39 Argument type mismatch: 
+actual type is 
+'AdminProfileActivity', but 
+'Context' was expected.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:173
+:26 None of the following 
+candidates is applicable:
+constructor(p0: Context!, 
+p1: Class<*>!): Intent
+constructor(p0: String!, p1: 
+Uri!): Intent
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:174
+:20 Unresolved reference 
+'addFlags'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:175
+:13 Unresolved reference 
+'startActivity'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/AdminProfileActivity.kt:176
+:13 Unresolved reference 
+'finish'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/DeviceManagementActivity.kt
+:55:50 Unresolved reference 
+'userId'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/DeviceManagementActivity.kt
+:55:58 Unresolved reference 
+'role'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/DeviceManagementActivity.kt
+:59:36 Unresolved reference 
+'userId'.
+e: file:///C:/Users/krish/And
+roidStudioProjects/TMApp/app/
+src/main/java/com/simats/tmap
+p/DeviceManagementActivity.kt
+:59:44 Unresolved reference 
+'role'.
+
+FAILURE: Build failed with 
+an exception.
+
+* What went wrong:
+Execution failed for task 
+':app:compileDebugKotlin'.
+> A failure occurred while 
+executing org.jetbrains.kotli
+n.compilerRunner.GradleCompil
+erRunnerWithWorkers$GradleKot
+linCompilerWorkAction
+   > Compilation error. See 
+log for more details
+
+* Try:
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --info or --debug 
+option to get more log 
+output.
+> Run with --scan to 
+generate a Build Scan 
+(Powered by Develocity).
+> Get more help at 
+https://help.gradle.org.
+
+BUILD FAILED in 11s
+6 actionable tasks: 1 executed, 5 up-to-date

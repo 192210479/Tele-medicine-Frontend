@@ -14,6 +14,7 @@ flexbox = "3.0.0"
 glide = "4.16.0"
 swiperefreshlayout = "1.2.0"
 pdfviewer = "3.2.0-beta.3"
+lifecycle = "2.8.7"
 
 [libraries]
 pdf-viewer = { group = "com.github.mhiew", name = "android-pdf-viewer", version.ref = "pdfviewer" }
@@ -32,6 +33,8 @@ flexbox = { group = "com.google.android.flexbox", name = "flexbox", version.ref 
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 glideCompiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
 androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -193,15 +193,6 @@
             android:layout_marginBottom="24dp"
             android:stateListAnimator="@animator/button_scale" />
 
-        <TextView
-            android:id="@+id/btnGuest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/continue_guest"
-            android:textColor="#E0E7FF"
-            android:textSize="16sp"
-            android:layout_gravity="center_horizontal"
-            android:padding="8dp"/>
 
     </LinearLayout>
 

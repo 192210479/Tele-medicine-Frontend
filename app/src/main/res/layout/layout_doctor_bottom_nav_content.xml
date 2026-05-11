@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">    <LinearLayout android:id="@+id/navHome" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:clickable="true" android:focusable="true">
-        <View android:id="@+id/indicatorHome" android:layout_width="24dp" android:layout_height="3dp" android:background="@color/surface_bg" android:layout_marginBottom="8dp" android:layout_marginTop="-8dp"/>
-        <ImageView android:id="@+id/iconHome" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_home_exact" app:tint="@color/text_grey"/>
-        <TextView android:id="@+id/textHome" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textColor="@color/text_grey" android:textSize="12sp" android:layout_marginTop="4dp"/>
-    </LinearLayout>
-    <LinearLayout android:id="@+id/navAppts" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:clickable="true" android:focusable="true">
-        <View android:id="@+id/indicatorAppts" android:layout_width="24dp" android:layout_height="3dp" android:background="@color/surface_bg" android:layout_marginBottom="8dp" android:layout_marginTop="-8dp"/>
-        <ImageView android:id="@+id/iconAppts" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_calendar_blue_exact" app:tint="@color/text_grey"/>
-        <TextView android:id="@+id/textAppts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Appointments" android:textColor="@color/text_grey" android:textSize="12sp" android:layout_marginTop="4dp"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout android:id="@+id/navHome" android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="match_parent" android:orientation="vertical" android:gravity="center"
+        android:clickable="true" android:focusable="true">
+        <View android:id="@+id/indicatorHome" android:layout_width="24dp" android:layout_height="3dp"
+            android:background="@color/surface_bg" android:layout_marginBottom="8dp" android:layout_marginTop="-8dp"/>
+        <ImageView android:id="@+id/iconHome" android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@drawable/ic_home_exact" app:tint="@color/text_grey"/>
+        <TextView android:id="@+id/textHome" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Home" android:textColor="@color/text_grey" android:textSize="12sp" android:layout_marginTop="4dp"/>
     </LinearLayout>
 
-    <LinearLayout android:id="@+id/navProfile" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:clickable="true" android:focusable="true">
-        <View android:id="@+id/indicatorProfile" android:layout_width="24dp" android:layout_height="3dp" android:background="@color/surface_bg" android:layout_marginBottom="8dp" android:layout_marginTop="-8dp"/>
-        <ImageView android:id="@+id/iconProfile" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_user_exact" app:tint="@color/text_grey"/>
-        <TextView android:id="@+id/textProfile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textColor="@color/text_grey" android:textSize="12sp" android:layout_marginTop="4dp"/>
+    <LinearLayout android:id="@+id/navAppts" android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="match_parent" android:orientation="vertical" android:gravity="center"
+        android:clickable="true" android:focusable="true">
+        <View android:id="@+id/indicatorAppts" android:layout_width="24dp" android:layout_height="3dp"
+            android:background="@color/surface_bg" android:layout_marginBottom="8dp" android:layout_marginTop="-8dp"/>
+        <ImageView android:id="@+id/iconAppts" android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@drawable/ic_calendar_blue_exact" app:tint="@color/text_grey"/>
+        <TextView android:id="@+id/textAppts" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Appointments" android:textColor="@color/text_grey" android:textSize="12sp" android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/navProfile" android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="match_parent" android:orientation="vertical" android:gravity="center"
+        android:clickable="true" android:focusable="true">
+        <View android:id="@+id/indicatorProfile" android:layout_width="24dp" android:layout_height="3dp"
+            android:background="@color/surface_bg" android:layout_marginBottom="8dp" android:layout_marginTop="-8dp"/>
+        <ImageView android:id="@+id/iconProfile" android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@drawable/ic_user_exact" app:tint="@color/text_grey"/>
+        <TextView android:id="@+id/textProfile" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Profile" android:textColor="@color/text_grey" android:textSize="12sp" android:layout_marginTop="4dp"/>
     </LinearLayout>
 
 </merge>

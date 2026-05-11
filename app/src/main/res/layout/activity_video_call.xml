@@ -95,6 +95,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#334155" />
+            
+        <ImageView
+            android:id="@+id/ivLocalPlaceholder"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_video_off"
+            android:visibility="gone"
+            app:tint="#64748B" />
     </com.google.android.material.card.MaterialCardView>
 
     <!-- Bottom Controls Area -->
@@ -104,137 +113,103 @@
         android:paddingBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <!-- Middle Overlay: Upload Panel -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvUploadReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="24dp"
-            app:cardBackgroundColor="#33FFFFFF"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="0dp"
-            app:layout_constraintBottom_toTopOf="@id/llControls"
-            app:strokeColor="#FFFFFF"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:background="@drawable/bg_circle_blue"
-                    android:padding="6dp"
-                    android:src="@drawable/ic_upload_white" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Upload Medical Report"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="PDF, JPG, PNG supported"
-                        android:textColor="#E2E8F0"
-                        android:textSize="10sp" />
-                </LinearLayout>
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
         <!-- Bottom Control Bar -->
-        <LinearLayout
+        <HorizontalScrollView
             android:id="@+id/llControls"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="@drawable/bg_blur_controls"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:scrollbars="none"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabMic"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_mic"
-                app:backgroundTint="#33FFFFFF"
-                app:elevation="0dp"
-                app:fabSize="mini"
-                app:tint="#FFFFFF" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabVideo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_video_white"
-                app:backgroundTint="#33FFFFFF"
-                app:elevation="0dp"
-                app:fabSize="mini"
-                app:tint="#FFFFFF" />
+                <!-- Mic -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabMic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_mic"
+                    app:backgroundTint="#B3000000"
+                    app:fabCustomSize="50dp"
+                    app:maxImageSize="24dp"
+                    app:tint="#FFFFFF"
+                    app:borderWidth="0dp" />
 
-            <!-- Large RED end call button in center -->
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabEndCall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_call_end"
-                app:backgroundTint="#EF4444"
-                app:elevation="4dp"
-                app:fabSize="normal"
-                app:tint="#FFFFFF" />
+                <!-- Camera -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_camera"
+                    app:backgroundTint="#B3000000"
+                    app:fabCustomSize="50dp"
+                    app:maxImageSize="24dp"
+                    app:tint="#FFFFFF"
+                    app:borderWidth="0dp" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabChat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_document"
-                app:backgroundTint="#33FFFFFF"
-                app:elevation="0dp"
-                app:fabSize="mini"
-                app:tint="#FFFFFF" />
+                <!-- End Call — CENTERED, LARGER -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabEndCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:src="@drawable/ic_call_end"
+                    app:backgroundTint="#EF4444"
+                    app:fabCustomSize="64dp"
+                    app:maxImageSize="32dp"
+                    app:tint="#FFFFFF"
+                    app:borderWidth="0dp" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabUpload"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_upload_white"
-                app:backgroundTint="#33FFFFFF"
-                app:elevation="0dp"
-                app:fabSize="mini"
-                app:tint="#FFFFFF" />
+                <!-- Speaker -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabSpeaker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/ic_speaker"
+                    app:backgroundTint="#B3000000"
+                    app:fabCustomSize="50dp"
+                    app:maxImageSize="24dp"
+                    app:tint="#FFFFFF"
+                    app:borderWidth="0dp" />
 
-            <!-- Kept for compatibility but hidden -->
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabSwitchCamera"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone" />
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabSpeaker"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone" />
+                <!-- Chat -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/ic_message"
+                    app:backgroundTint="#B3000000"
+                    app:fabCustomSize="50dp"
+                    app:maxImageSize="24dp"
+                    app:tint="#FFFFFF"
+                    app:borderWidth="0dp" />
 
-        </LinearLayout>
+                <!-- Upload (NEW — compact FAB, replaces the big banner) -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabUpload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/ic_upload_white"
+                    app:backgroundTint="#B3000000"
+                    app:fabCustomSize="50dp"
+                    app:maxImageSize="24dp"
+                    app:tint="#FFFFFF"
+                    app:borderWidth="0dp" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

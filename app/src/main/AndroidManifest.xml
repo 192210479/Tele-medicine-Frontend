@@ -23,7 +23,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TMApp"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        tools:replace="android:fullBackupContent"
+        tools:targetApi="31">
 
         <activity
             android:name=".MainActivity"
@@ -41,6 +43,8 @@
         <activity android:name=".LoginActivity" android:exported="false" />
         <activity android:name=".ResetPasswordActivity" android:exported="false" />
         <activity android:name=".CheckEmailActivity" android:exported="false" />
+        <activity android:name=".VerifyOtpActivity" android:exported="false" />
+        <activity android:name=".UpdatePasswordActivity" android:exported="false" />
         <activity android:name=".CreateAccountRoleActivity" android:exported="false" />
         <activity android:name=".CreateAccountDetailsActivity" android:exported="false" />
         <activity android:name=".CreateDoctorDetailsActivity" android:exported="false" />
@@ -59,7 +63,10 @@
         <activity android:name=".ConsultationWaitingActivity" android:exported="false" />
         <activity android:name=".ConsultationReadyActivity" android:exported="false" />
         <activity android:name=".PatientVideoCallActivity" android:exported="false" />
-        <activity android:name=".ChatActivity" android:exported="false" />
+        <activity 
+            android:name=".ChatActivity" 
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".UploadReportsActivity" android:exported="false" />
         <activity android:name=".PrescriptionCreatingActivity" android:exported="false" />
         <activity android:name=".PrescriptionDetailsActivity" android:exported="false" />
@@ -88,9 +95,14 @@
         <activity android:name=".EditDoctorProfileActivity" android:exported="false" />
         <activity android:name=".DoctorAppointmentsActivity" android:exported="false" />
         <activity android:name=".HelpSupportActivity" android:exported="false" />
+        <activity android:name=".MyTicketsActivity" android:exported="false" />
+        <activity android:name=".AdminSupportActivity" android:exported="false" />
+        <activity android:name=".AdminTicketDetailActivity" android:exported="false" />
         <activity android:name=".NewPrescriptionActivity" android:exported="false" />
         <activity android:name=".ManualPrescriptionEntryActivity" android:exported="false" />
         <activity android:name=".AdminDashboardActivity" android:exported="false" />
+        <activity android:name=".AdminDoctorsActivity" android:exported="false" />
+        <activity android:name=".AdminPatientsActivity" android:exported="false" />
         <activity android:name=".DoctorApprovalActivity" android:exported="false" />
         <activity android:name=".AdminProfileActivity" android:exported="false" />
         <activity android:name=".AdminEditProfileActivity" android:exported="false" />
@@ -103,6 +115,14 @@
                 <action android:name="com.simats.tmapp.ACTION_REMINDER" />
                 <action android:name="com.simats.tmapp.ACTION_MARK_TAKEN" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".AppointmentReminderReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.simats.tmapp.ACTION_APPOINTMENT_REMINDER" />
             </intent-filter>
         </receiver>
 
@@ -175,6 +195,13 @@
             android:exported="false"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Checkout"
+            tools:replace="android:theme,android:exported,android:configChanges" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -184,6 +211,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <activity android:name=".AiSupportChatActivity" />
     </application>
 
 </manifest>

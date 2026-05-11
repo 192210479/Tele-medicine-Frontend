@@ -104,18 +104,6 @@
                 android:paddingHorizontal="20dp"
                 android:paddingVertical="10dp"
                 android:layout_marginEnd="12dp"/>
-                
-            <TextView
-                android:id="@+id/tabMessages"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Messages"
-                android:textColor="@color/text_grey"
-                android:textSize="14sp"
-                android:background="@drawable/bg_tab_unselected"
-                android:paddingHorizontal="20dp"
-                android:paddingVertical="10dp"
-                android:layout_marginEnd="12dp"/>
 
             <TextView
                 android:id="@+id/tabPayments"

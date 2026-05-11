@@ -29,43 +29,20 @@
         app:layout_constraintStart_toEndOf="@id/ivBack"
         android:layout_marginStart="16dp"/>
 
-    <!-- Progress bar -->
-    <LinearLayout
-        android:id="@+id/llProgress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/ivBack">
-        <View
-            android:layout_width="0dp"
-            android:layout_height="4dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_circle_soft_blue"
-            android:backgroundTint="@color/primary_blue"
-            android:layout_marginEnd="4dp"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="4dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_circle_soft_blue"
-            android:backgroundTint="@color/primary_blue"
-            android:layout_marginStart="4dp"/>
-    </LinearLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:scrollbars="none"
         android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/llProgress"
+        app:layout_constraintTop_toBottomOf="@id/ivBack"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp">
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
 
             <TextView
                 android:id="@+id/tvTitle"
@@ -74,164 +51,464 @@
                 android:text="@string/doctor_details"
                 android:textColor="@color/text_dark"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/tvDesc"
+            <!-- Full Name -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/patient_details_desc"
-                android:textColor="@color/text_grey"
-                android:textSize="16sp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@id/tvTitle"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-            <!-- Name -->
-            <TextView
-                android:id="@+id/tvNameLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/full_name"
-                android:textColor="@color/text_grey"
-                android:textSize="14sp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/tvDesc"
-                app:layout_constraintStart_toStartOf="parent"/>
-
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="#DC2626"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
             <EditText
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="@string/full_name_hint"
+                android:hint="Enter full name"
                 android:inputType="textPersonName"
-                android:background="@drawable/bg_input"
-                android:backgroundTint="@color/white"
+                android:background="@drawable/bg_input_selector"
                 android:paddingHorizontal="16dp"
                 android:textColorHint="#94A3B8"
                 android:textColor="@color/text_dark"
                 android:textSize="16sp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@id/tvNameLabel"/>
-
-            <!-- Email -->
+                android:layout_marginTop="8dp"/>
             <TextView
-                android:id="@+id/tvEmailLabel"
+                android:id="@+id/tvNameError"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email"
-                android:textColor="@color/text_grey"
-                android:textSize="14sp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/etName"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:textColor="#DC2626"
+                android:textSize="12sp"
+                android:visibility="gone" />
 
+            <!-- Email -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="#DC2626"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
             <EditText
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="@string/full_name_hint"
-                android:text="john@example.com"
+                android:hint="Enter valid email address"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/bg_input"
-                android:backgroundTint="@color/white"
+                android:background="@drawable/bg_input_selector"
                 android:paddingHorizontal="16dp"
                 android:textColorHint="#94A3B8"
                 android:textColor="@color/text_dark"
                 android:textSize="16sp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"/>
-
-            <!-- Password -->
+                android:layout_marginTop="8dp"/>
             <TextView
-                android:id="@+id/tvPasswordLabel"
+                android:id="@+id/tvEmailError"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/password"
-                android:textColor="@color/text_grey"
-                android:textSize="14sp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/etEmail"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:textColor="#DC2626"
+                android:textSize="12sp"
+                android:visibility="gone" />
 
+            <!-- Password -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="#DC2626"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
             <EditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="@string/password_hint"
+                android:hint="Create a strong password"
                 android:inputType="textPassword"
-                android:background="@drawable/bg_input"
-                android:backgroundTint="@color/white"
+                android:background="@drawable/bg_input_selector"
                 android:paddingHorizontal="16dp"
                 android:textColorHint="#94A3B8"
                 android:textColor="@color/text_dark"
                 android:textSize="16sp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel"/>
-
-            <!-- Specialization -->
+                android:layout_marginTop="8dp"/>
             <TextView
-                android:id="@+id/tvSpecLabel"
+                android:id="@+id/tvPasswordError"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/specialization"
-                android:textColor="@color/text_grey"
-                android:textSize="14sp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/etPassword"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:textColor="#DC2626"
+                android:textSize="12sp"
+                android:visibility="gone" />
 
+            <!-- Confirm Password -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Password"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="#DC2626"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Re-enter password"
+                android:inputType="textPassword"
+                android:background="@drawable/bg_input_selector"
+                android:paddingHorizontal="16dp"
+                android:textColorHint="#94A3B8"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tvConfirmPasswordError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#DC2626"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <!-- Specialization -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Specialization"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="#DC2626"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
             <EditText
                 android:id="@+id/etSpec"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="@string/specialization_hint"
+                android:hint="Select specialization"
                 android:inputType="text"
-                android:background="@drawable/bg_input"
-                android:backgroundTint="@color/white"
+                android:background="@drawable/bg_input_selector"
                 android:paddingHorizontal="16dp"
                 android:textColorHint="#94A3B8"
                 android:textColor="@color/text_dark"
                 android:textSize="16sp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@id/tvSpecLabel"/>
-
-            <!-- License Number -->
+                android:layout_marginTop="8dp"/>
             <TextView
-                android:id="@+id/tvLicenseLabel"
+                android:id="@+id/tvSpecError"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/license_number"
-                android:textColor="@color/text_grey"
-                android:textSize="14sp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/etSpec"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:textColor="#DC2626"
+                android:textSize="12sp"
+                android:visibility="gone" />
 
+            <!-- License Number -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="License Number"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="#DC2626"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
             <EditText
                 android:id="@+id/etLicense"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="@string/license_number_hint"
+                android:hint="Enter valid license number"
                 android:inputType="text"
-                android:background="@drawable/bg_input"
-                android:backgroundTint="@color/white"
+                android:background="@drawable/bg_input_selector"
                 android:paddingHorizontal="16dp"
                 android:textColorHint="#94A3B8"
                 android:textColor="@color/text_dark"
                 android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tvLicenseErrorLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#DC2626"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <!-- Experience Years (Optional) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Experience Years"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+            <EditText
+                android:id="@+id/etExperience"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Years of experience (optional)"
+                android:inputType="number"
+                android:background="@drawable/bg_input_selector"
+                android:paddingHorizontal="16dp"
+                android:textColorHint="#94A3B8"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Consultation Fee (Optional) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consultation Fee (₹)"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/etFee"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Fee per consultation (optional)"
+                android:inputType="numberDecimal"
+                android:background="@drawable/bg_input_selector"
+                android:paddingHorizontal="16dp"
+                android:textColorHint="#94A3B8"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Languages (Optional) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Languages"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/etLanguages"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Languages spoken (e.g. English, Hindi)"
+                android:inputType="text"
+                android:background="@drawable/bg_input_selector"
+                android:paddingHorizontal="16dp"
+                android:textColorHint="#94A3B8"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Bio (Optional) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Short Bio"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/etBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:hint="Tell patients about yourself..."
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:background="@drawable/bg_input_selector"
+                android:padding="16dp"
+                android:textColorHint="#94A3B8"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Documents -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="License Document (PDF)"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="#DC2626"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvLicenseFile"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
                 android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@id/tvLicenseLabel"/>
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/sl_input_border"
+                android:clickable="true"
+                android:focusable="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_document"
+                        app:tint="@color/text_grey" />
+                    <TextView
+                        android:id="@+id/tvLicenseFileName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:text="Upload license document (PDF)"
+                        android:textColor="@color/text_grey"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:id="@+id/tvLicenseFileError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#DC2626"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medical Records Document (PDF)"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" *"
+                    android:textColor="#DC2626"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvMedicalFile"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/sl_input_border"
+                android:clickable="true"
+                android:focusable="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_document"
+                        app:tint="@color/text_grey" />
+                    <TextView
+                        android:id="@+id/tvMedicalFileName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:text="Upload medical records (PDF)"
+                        android:textColor="@color/text_grey"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:id="@+id/tvMedicalFileError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#DC2626"
+                android:textSize="12sp"
+                android:visibility="gone" />
 
             <!-- Buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/etLicense">
+                android:layout_marginTop="32dp">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnBack"
@@ -243,7 +520,9 @@
                     android:textSize="16sp"
                     app:backgroundTint="@color/app_bg"
                     app:cornerRadius="12dp"
-                    android:layout_marginEnd="8dp"/>
+                    android:layout_marginEnd="8dp"
+                    app:strokeColor="@color/border_primary"
+                    app:strokeWidth="1dp"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnRegister"
@@ -259,6 +538,6 @@
 
             </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

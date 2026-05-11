@@ -104,9 +104,10 @@
                     app:tint="@color/star_yellow"/>
                 
                 <TextView
+                    android:id="@+id/tvProfileRating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4.9"
+                    android:text="★ 0.0"
                     android:textColor="@color/text_dark"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -186,7 +187,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="$"
+                            android:text="₹"
                             android:textColor="#10B981"
                             android:textSize="20sp"
                             android:textStyle="bold"/>
@@ -194,7 +195,7 @@
                             android:id="@+id/tvFee"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="$50"
+                            android:text="₹50"
                             android:textColor="@color/text_dark"
                             android:textSize="14sp"
                             android:textStyle="bold"

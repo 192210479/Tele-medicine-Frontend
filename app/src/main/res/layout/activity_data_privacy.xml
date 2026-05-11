@@ -77,7 +77,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Last updated: October 24, 2023"
+                android:text="Last updated: Today"
                 android:textColor="@color/text_grey"
                 android:textSize="15sp"
                 android:layout_marginBottom="32dp"/>
@@ -89,16 +89,16 @@
                 android:textColor="@color/text_dark"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="We collect information you provide directly to us, such as when you create or modify your account, request on-demand services, contact customer support, or otherwise communicate with us. This information may include: name, email, phone number, postal address, profile picture, payment method, items requested (for delivery services), delivery notes, and other information you choose to provide."
+                android:text="We collect necessary information such as identity verification, contact details, payment info, and relevant healthcare data depending on your role to properly provide TeleHealth+ services."
                 android:textColor="@color/text_grey"
                 android:textSize="15sp"
                 android:lineHeight="22sp"
-                android:layout_marginBottom="28dp"/>
+                android:layout_marginBottom="24dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -107,36 +107,16 @@
                 android:textColor="@color/text_dark"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="We use the information we collect to provide, maintain, and improve our services, such as to:"
+                android:text="To provide medical consultations, process payments securely, verify credentials, send necessary updates and reminders, and to ensure a safe environment for healthcare interactions."
                 android:textColor="@color/text_grey"
                 android:textSize="15sp"
                 android:lineHeight="22sp"
-                android:layout_marginBottom="16dp"/>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="@color/text_grey" android:textSize="18sp" android:layout_marginEnd="12dp"/>
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Provide medical consultations and appointment booking" android:textColor="@color/text_grey" android:textSize="15sp" android:lineHeight="22sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="@color/text_grey" android:textSize="18sp" android:layout_marginEnd="12dp"/>
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Process payments and send receipts" android:textColor="@color/text_grey" android:textSize="15sp" android:lineHeight="22sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="@color/text_grey" android:textSize="18sp" android:layout_marginEnd="12dp"/>
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Send you updates, security alerts, and support messages" android:textColor="@color/text_grey" android:textSize="15sp" android:lineHeight="22sp"/>
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="28dp">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:textColor="@color/text_grey" android:textSize="18sp" android:layout_marginEnd="12dp"/>
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Detect and prevent fraud and abuse" android:textColor="@color/text_grey" android:textSize="15sp" android:lineHeight="22sp"/>
-            </LinearLayout>
+                android:layout_marginBottom="24dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -145,16 +125,16 @@
                 android:textColor="@color/text_dark"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="We implement appropriate technical and organizational measures to protect your personal data against unauthorized or unlawful processing, accidental loss, destruction, or damage. All medical data is encrypted and stored in compliance with HIPAA regulations."
+                android:text="All information is stored securely according to applicable platform security standards. We employ encryption, secure storage, and controlled access mechanisms to protect your privacy."
                 android:textColor="@color/text_grey"
                 android:textSize="15sp"
                 android:lineHeight="22sp"
-                android:layout_marginBottom="28dp"/>
+                android:layout_marginBottom="24dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -163,12 +143,31 @@
                 android:textColor="@color/text_dark"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="You have the right to access, correct, or delete your personal data. You can manage your communication preferences in the app settings. For any data-related queries, you can contact our support team at any time."
+                android:text="You have the right to access, correct, or delete your account data. You can manage your information directly through your profile settings."
+                android:textColor="@color/text_grey"
+                android:textSize="15sp"
+                android:lineHeight="22sp"
+                android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5. Account-Specific Access"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvAccountSpecific"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
                 android:textColor="@color/text_grey"
                 android:textSize="15sp"
                 android:lineHeight="22sp"

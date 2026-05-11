@@ -44,6 +44,19 @@
         app:layout_constraintTop_toBottomOf="@id/llHeader"
         app:layout_constraintBottom_toTopOf="@id/bottomNav" />
 
+    <TextView
+        android:id="@+id/tvEmptyState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No upcoming appointments"
+        android:textColor="@color/text_gray"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/llHeader"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <!-- Bottom Navigation Mock -->
     <include layout="@layout/layout_patient_bottom_nav"
         android:id="@+id/bottomNav"

@@ -79,6 +79,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
                         <ImageView
+                            android:id="@+id/ivDoctorImage"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:src="@drawable/bg_image_mock"
@@ -146,9 +147,10 @@
                             android:layout_height="12dp"
                             android:src="@drawable/ic_star"/>
                         <TextView
+                            android:id="@+id/tvSlotRating"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="4.9"
+                            android:text="★ 0.0"
                             android:textColor="@color/star_yellow"
                             android:textSize="12sp"
                             android:textStyle="bold"
@@ -310,20 +312,11 @@
                 android:id="@+id/glSlots"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:columnCount="3"
+                android:columnCount="2"
                 android:layout_marginTop="16dp">
-
-                <TextView android:layout_width="0dp" android:layout_height="44dp" android:layout_columnWeight="1" android:text="09:00 AM" android:gravity="center" android:background="@drawable/bg_badge_white" android:textColor="@color/text_dark" android:textSize="13sp" android:layout_margin="4dp" android:elevation="0dp"/>
-                <TextView android:layout_width="0dp" android:layout_height="44dp" android:layout_columnWeight="1" android:text="09:30 AM" android:gravity="center" android:background="@drawable/bg_badge_white" android:textColor="@color/text_dark" android:textSize="13sp" android:layout_margin="4dp" android:elevation="0dp"/>
-                <TextView android:layout_width="0dp" android:layout_height="44dp" android:layout_columnWeight="1" android:text="10:00 AM" android:gravity="center" android:background="@drawable/bg_badge_white" android:textColor="@color/text_dark" android:textSize="13sp" android:layout_margin="4dp" android:elevation="0dp"/>
-
-                <TextView android:layout_width="0dp" android:layout_height="44dp" android:layout_columnWeight="1" android:text="10:30 AM" android:gravity="center" android:background="@drawable/bg_badge_white" android:textColor="@color/text_dark" android:textSize="13sp" android:layout_margin="4dp" android:elevation="0dp"/>
-                <TextView android:layout_width="0dp" android:layout_height="44dp" android:layout_columnWeight="1" android:text="11:00 AM" android:gravity="center" android:background="@drawable/bg_badge_white" android:textColor="@color/text_dark" android:textSize="13sp" android:layout_margin="4dp" android:elevation="0dp"/>
-                <TextView android:layout_width="0dp" android:layout_height="44dp" android:layout_columnWeight="1" android:text="11:30 AM" android:gravity="center" android:background="@drawable/bg_badge_white" android:textColor="@color/text_dark" android:textSize="13sp" android:layout_margin="4dp" android:elevation="0dp"/>
-
-                <TextView android:layout_width="0dp" android:layout_height="44dp" android:layout_columnWeight="1" android:text="02:00 PM" android:gravity="center" android:background="@drawable/bg_badge_white" android:textColor="@color/text_dark" android:textSize="13sp" android:layout_margin="4dp" android:elevation="0dp"/>
-                <TextView android:layout_width="0dp" android:layout_height="44dp" android:layout_columnWeight="1" android:text="02:30 PM" android:gravity="center" android:background="@drawable/bg_badge_white" android:textColor="@color/text_dark" android:textSize="13sp" android:layout_margin="4dp" android:elevation="0dp"/>
-                <TextView android:layout_width="0dp" android:layout_height="44dp" android:layout_columnWeight="1" android:text="03:00 PM" android:gravity="center" android:background="@drawable/bg_badge_white" android:textColor="@color/text_dark" android:textSize="13sp" android:layout_margin="4dp" android:elevation="0dp"/>
+                
+                <!-- Slots will be added dynamically -->
+                
             </GridLayout>
 
             <com.google.android.material.button.MaterialButton

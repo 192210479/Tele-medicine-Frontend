@@ -175,7 +175,7 @@
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-
+            
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -219,6 +219,7 @@
                         android:layout_marginTop="4dp"/>
 
                     <TextView
+                        android:id="@+id/tvConsultationStatusLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Consultation Status"
@@ -237,10 +238,25 @@
                         android:layout_marginTop="4dp"/>
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPayNow"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Pay Consultation Fee"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:cornerRadius="16dp"
+                        app:backgroundTint="@color/primary_blue"
+                        app:iconGravity="textStart"
+                        app:iconPadding="12dp" />
+
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnShareReports"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="16dp"
                         android:text="Share Medical Reports"
                         android:textAllCaps="false"
                         android:textSize="16sp"
@@ -249,6 +265,68 @@
                         app:icon="@drawable/ic_share"
                         app:iconGravity="textStart"
                         app:iconPadding="12dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCancelAppointment"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Cancel Appointment"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:cornerRadius="16dp"
+                        app:backgroundTint="@color/red_danger" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Cancellation Details -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvCancellationDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/surface_bg"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancellation Info"
+                        android:textColor="@color/red_danger"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:id="@+id/tvCancelledBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancelled by: ---"
+                        android:textColor="@color/text_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCancellationReason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reason: ---"
+                        android:textColor="@color/text_grey"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"/>
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

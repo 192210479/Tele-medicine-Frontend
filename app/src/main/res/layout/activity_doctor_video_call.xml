@@ -120,6 +120,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#334155" />
+
+        <ImageView
+            android:id="@+id/ivLocalPlaceholder"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_video_off"
+            android:visibility="gone"
+            app:tint="#D1D5DB" />
     </com.google.android.material.card.MaterialCardView>
 
     <!-- Patient Info Card -->
@@ -208,152 +217,147 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Bottom Controls -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- Bottom Control Bar -->
+    <HorizontalScrollView
+        android:id="@+id/hsvControls"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:paddingBottom="40dp">
-
-        <!-- Report Upload Placeholder -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvUploadReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="24dp"
-            app:cardBackgroundColor="#33FFFFFF"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="0dp"
-            app:strokeColor="#FFFFFF"
-            app:strokeWidth="1dp"
-            app:layout_constraintBottom_toTopOf="@id/llControls">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:background="@drawable/bg_circle_blue"
-                    android:padding="6dp"
-                    android:src="@drawable/ic_upload_white" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Upload Prescription / Report"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="PDF, JPG, PNG supported"
-                        android:textColor="#E2E8F0"
-                        android:textSize="10sp" />
-                </LinearLayout>
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/transparent"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:id="@+id/llControls"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="@drawable/bg_blur_controls"
-            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent">
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp">
 
+            <!-- Mic -->
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabMic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="12dp"
+                app:fabCustomSize="50dp"
+                app:maxImageSize="24dp"
                 android:src="@drawable/ic_mic"
-                app:backgroundTint="#33FFFFFF"
+                app:tint="#FFFFFF"
+                app:backgroundTint="#B3000000"
+                app:borderWidth="0dp"
                 app:elevation="0dp"
-                app:fabSize="mini"
-                app:tint="#FFFFFF" />
+                android:contentDescription="Mute Mic"/>
 
+            <!-- Camera -->
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabVideo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_video_white"
-                app:backgroundTint="#33FFFFFF"
+                android:layout_marginEnd="12dp"
+                app:fabCustomSize="50dp"
+                app:maxImageSize="24dp"
+                android:src="@drawable/ic_video"
+                app:tint="#FFFFFF"
+                app:backgroundTint="#B3000000"
+                app:borderWidth="0dp"
                 app:elevation="0dp"
-                app:fabSize="mini"
-                app:tint="#FFFFFF" />
+                android:contentDescription="Toggle Video"/>
 
+            <!-- Switch -->
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabSpeaker"
+                android:id="@+id/fabSwitchCamera"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_speaker"
-                app:backgroundTint="#33FFFFFF"
+                android:layout_marginEnd="12dp"
+                app:fabCustomSize="50dp"
+                app:maxImageSize="24dp"
+                android:src="@drawable/ic_flip_camera"
+                app:tint="#FFFFFF"
+                app:backgroundTint="#B3000000"
+                app:borderWidth="0dp"
                 app:elevation="0dp"
-                app:fabSize="mini"
-                app:tint="#FFFFFF" />
+                android:contentDescription="Switch Camera"/>
 
+            <!-- END CALL (Centered Emphasis) -->
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabEndCall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginHorizontal="16dp"
+                app:fabCustomSize="60dp"
+                app:maxImageSize="30dp"
                 android:src="@drawable/ic_call_end"
+                app:tint="#FFFFFF"
                 app:backgroundTint="#EF4444"
+                app:borderWidth="0dp"
                 app:elevation="4dp"
-                app:fabSize="normal"
-                app:tint="#FFFFFF" />
+                android:contentDescription="End Call"/>
 
+            <!-- Speaker -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabSpeaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                app:fabCustomSize="50dp"
+                app:maxImageSize="24dp"
+                android:src="@drawable/ic_speaker"
+                app:tint="#FFFFFF"
+                app:backgroundTint="#B3000000"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                android:contentDescription="Speaker"/>
+
+            <!-- Chat -->
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabChat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_chat_bubble_outline"
-                app:backgroundTint="#33FFFFFF"
+                android:layout_marginStart="12dp"
+                app:fabCustomSize="50dp"
+                app:maxImageSize="24dp"
+                android:src="@drawable/ic_message"
+                app:tint="#FFFFFF"
+                app:backgroundTint="#B3000000"
+                app:borderWidth="0dp"
                 app:elevation="0dp"
-                app:fabSize="mini"
-                app:tint="#FFFFFF" />
+                android:contentDescription="Chat"/>
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabPatientData"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_document"
-                app:backgroundTint="#33FFFFFF"
-                app:elevation="0dp"
-                app:fabSize="mini"
-                app:tint="#FFFFFF" />
-
+            <!-- Upload -->
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabUpload"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                app:fabCustomSize="50dp"
+                app:maxImageSize="24dp"
                 android:src="@drawable/ic_upload_white"
-                app:backgroundTint="#33FFFFFF"
+                app:tint="#FFFFFF"
+                app:backgroundTint="#B3000000"
+                app:borderWidth="0dp"
                 app:elevation="0dp"
-                app:fabSize="mini"
-                app:tint="#FFFFFF" />
+                android:contentDescription="Upload File"/>
+
+            <!-- Patient Info -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabPatientData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                app:fabCustomSize="50dp"
+                app:maxImageSize="24dp"
+                android:src="@drawable/ic_info"
+                app:tint="#FFFFFF"
+                app:backgroundTint="#B3000000"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                android:contentDescription="Patient Records"/>
+
         </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

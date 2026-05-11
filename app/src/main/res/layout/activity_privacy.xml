@@ -210,7 +210,7 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
-                            android:text="Data &amp; Privacy Policy"
+                            android:text="Data Privacy"
                             android:textColor="@color/text_dark"
                             android:textSize="15sp"
                             android:textStyle="bold"

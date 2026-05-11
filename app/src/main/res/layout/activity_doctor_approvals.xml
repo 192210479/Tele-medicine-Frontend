@@ -14,13 +14,15 @@
         android:orientation="horizontal"
         android:padding="20dp"
         android:gravity="center_vertical"
-        android:background="@color/surface_bg"
-        android:elevation="4dp">
+        android:background="@color/white"
+        android:elevation="0dp">
         
         <ImageView
             android:id="@+id/ivBack"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:background="@drawable/bg_circle_soft_gray"
             android:src="@drawable/ic_arrow_back"
             android:clickable="true"
             android:focusable="true"
@@ -32,8 +34,9 @@
             android:layout_marginStart="16dp"
             android:text="Doctor Approvals"
             android:textColor="#0F172A"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"/>
     </LinearLayout>
 
     <ScrollView
@@ -46,205 +49,167 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="24dp"
-            android:paddingTop="24dp">
+            android:paddingHorizontal="20dp"
+            android:paddingTop="20dp">
 
-            <!-- Stat Cards Row -->
+            <!-- Stats Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="3">
+                android:weightSum="3"
+                android:layout_marginBottom="24dp">
                 
-                <!-- Pending Stat -->
+                <!-- Pending Card -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardStatPending"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/surface_bg"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
                     app:cardCornerRadius="16dp"
-                    app:strokeWidth="0dp"
                     app:cardElevation="2dp"
-                    android:layout_marginHorizontal="4dp">
-
+                    app:strokeWidth="0dp">
+                    
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:gravity="center_vertical">
+                        android:orientation="vertical"
+                        android:padding="12dp">
                         
-                        <FrameLayout
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:padding="6dp"
                             android:background="@drawable/bg_circle_soft_blue"
-                            android:backgroundTint="#EFF6FF">
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/ic_clock_outline"
-                                app:tint="#3B82F6"/>
-                        </FrameLayout>
+                            android:backgroundTint="#EFF6FF"
+                            android:src="@drawable/ic_clock_outline"
+                            app:tint="#3B82F6" />
 
-                        <LinearLayout
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="12dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Pending"
-                                android:textColor="#64748B"
-                                android:textSize="12sp"/>
-                            <TextView
-                                android:id="@+id/tvPendingCount"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="12"
-                                android:textColor="#0F172A"
-                                android:textSize="20sp"
-                                android:textStyle="bold"/>
-                        </LinearLayout>
+                            android:text="Pending"
+                            android:textColor="#64748B"
+                            android:textSize="12sp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"/>
+
+                        <TextView
+                            android:id="@+id/tvPendingCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#0F172A"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Approved Stat -->
+                <!-- Approved Card -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardStatApproved"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/surface_bg"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="3dp"
                     app:cardCornerRadius="16dp"
-                    app:strokeWidth="0dp"
                     app:cardElevation="2dp"
-                    android:layout_marginHorizontal="4dp">
-
+                    app:strokeWidth="0dp">
+                    
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:gravity="center_vertical">
+                        android:orientation="vertical"
+                        android:padding="12dp">
                         
-                        <FrameLayout
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:background="@drawable/bg_circle_soft_blue"
-                            android:backgroundTint="#EFF6FF">
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/ic_check"
-                                app:tint="#3B82F6"/>
-                        </FrameLayout>
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:padding="6dp"
+                            android:background="@drawable/bg_circle_soft_green"
+                            android:backgroundTint="#ECFDF5"
+                            android:src="@drawable/ic_check"
+                            app:tint="#10B981" />
 
-                        <LinearLayout
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="12dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Approved"
-                                android:textColor="#64748B"
-                                android:textSize="12sp"/>
-                            <TextView
-                                android:id="@+id/tvApprovedCount"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="45"
-                                android:textColor="#0F172A"
-                                android:textSize="20sp"
-                                android:textStyle="bold"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="+5"
-                                android:textColor="#10B981"
-                                android:textSize="12sp"
-                                android:textStyle="bold"/>
-                        </LinearLayout>
+                            android:text="Approved"
+                            android:textColor="#64748B"
+                            android:textSize="12sp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"/>
+
+                        <TextView
+                            android:id="@+id/tvApprovedCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#0F172A"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Rejected Stat -->
+                <!-- Rejected Card -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardStatRejected"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/surface_bg"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
                     app:cardCornerRadius="16dp"
-                    app:strokeWidth="0dp"
                     app:cardElevation="2dp"
-                    android:layout_marginHorizontal="4dp">
-
+                    app:strokeWidth="0dp">
+                    
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:gravity="center_vertical">
+                        android:orientation="vertical"
+                        android:padding="12dp">
                         
-                        <FrameLayout
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:background="@drawable/bg_circle_soft_blue"
-                            android:backgroundTint="#EFF6FF">
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/ic_close"
-                                app:tint="#3B82F6"/>
-                        </FrameLayout>
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:padding="6dp"
+                            android:background="@drawable/bg_badge_red_soft"
+                            android:backgroundTint="#FEF2F2"
+                            android:src="@drawable/ic_close"
+                            app:tint="#EF4444" />
 
-                        <LinearLayout
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_marginStart="12dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Rejected"
-                                android:textColor="#64748B"
-                                android:textSize="12sp"/>
-                            <TextView
-                                android:id="@+id/tvRejectedCount"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="3"
-                                android:textColor="#0F172A"
-                                android:textSize="20sp"
-                                android:textStyle="bold"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="+1"
-                                android:textColor="#EF4444"
-                                android:textSize="12sp"
-                                android:textStyle="bold"/>
-                        </LinearLayout>
+                            android:text="Rejected"
+                            android:textColor="#64748B"
+                            android:textSize="12sp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"/>
+
+                        <TextView
+                            android:id="@+id/tvRejectedCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#0F172A"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-            <!-- Tabs -->
+            <!-- Tabs Segmented Control -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="54dp"
                 android:orientation="horizontal"
                 android:background="@drawable/bg_rounded_soft_gray_12dp"
                 android:backgroundTint="#F1F5F9"
-                android:padding="4dp"
-                android:layout_marginTop="24dp">
+                android:padding="4dp">
                 
                 <TextView
                     android:id="@+id/tabPending"
@@ -258,7 +223,9 @@
                     android:textStyle="bold"
                     android:background="@drawable/bg_tab_selected_light"
                     android:clickable="true"
-                    android:focusable="true"/>
+                    android:focusable="true"
+                    android:elevation="2dp"
+                    android:fontFamily="sans-serif"/>
 
                 <TextView
                     android:id="@+id/tabApproved"
@@ -271,7 +238,8 @@
                     android:textSize="14sp"
                     android:background="@android:color/transparent"
                     android:clickable="true"
-                    android:focusable="true"/>
+                    android:focusable="true"
+                    android:fontFamily="sans-serif-medium"/>
 
                 <TextView
                     android:id="@+id/tabRejected"
@@ -284,34 +252,31 @@
                     android:textSize="14sp"
                     android:background="@android:color/transparent"
                     android:clickable="true"
-                    android:focusable="true"/>
+                    android:focusable="true"
+                    android:fontFamily="sans-serif-medium"/>
             </LinearLayout>
 
-            <!-- Content Area -->
-            <FrameLayout
+            <!-- List Content -->
+            <LinearLayout
+                android:id="@+id/llApprovalsContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_marginTop="24dp"
-                android:paddingBottom="24dp">
-                
-                <LinearLayout
-                    android:id="@+id/llApprovalsContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"/>
-            </FrameLayout>
+                android:paddingBottom="40dp" />
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation Component from AdminDashboard -->
+    <!-- Bottom Nav -->
     <LinearLayout
         android:id="@+id/bottomNavAdmin"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:orientation="horizontal"
-        android:background="@color/surface_bg"
-        android:elevation="12dp">
+        android:background="@color/white"
+        android:elevation="16dp"
+        android:paddingHorizontal="24dp">
 
         <LinearLayout
             android:id="@+id/navDashboard"
@@ -321,9 +286,10 @@
             android:orientation="vertical"
             android:gravity="center"
             android:clickable="true"
-            android:focusable="true">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_home" app:tint="#94A3B8"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dashboard" android:textColor="#94A3B8" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+            android:focusable="true"
+            android:alpha="0.6">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_home" app:tint="#64748B"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dashboard" android:textColor="#64748B" android:textSize="11sp" android:layout_marginTop="4dp" android:fontFamily="sans-serif-medium"/>
         </LinearLayout>
         
         <LinearLayout
@@ -334,9 +300,10 @@
             android:orientation="vertical"
             android:gravity="center"
             android:clickable="true"
-            android:focusable="true">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_user" app:tint="#94A3B8"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textColor="#94A3B8" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+            android:focusable="true"
+            android:alpha="0.6">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_user" app:tint="#64748B"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textColor="#64748B" android:textSize="11sp" android:layout_marginTop="4dp" android:fontFamily="sans-serif-medium"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

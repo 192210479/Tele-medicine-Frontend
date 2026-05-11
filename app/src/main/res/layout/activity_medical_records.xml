@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8FAFC">
+    android:background="@color/app_bg">
 
     <!-- Header -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +23,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="#1E293B" />
+            app:tint="@color/text_dark" />
 
         <TextView
             android:id="@+id/tvHeaderTitle"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Medical Records"
-            android:textColor="#1E293B"
+            android:textColor="@color/text_dark"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -57,109 +57,24 @@
         android:id="@+id/headerDivider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#E2E8F0"
+        android:background="@color/divider_soft"
         app:layout_constraintTop_toBottomOf="@id/clHeader" />
 
-    <HorizontalScrollView
-        android:id="@+id/hsvTabs"
-        android:layout_width="match_parent"
+    <!-- Section Label -->
+    <TextView
+        android:id="@+id/tvSectionLabel"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="16dp"
-        android:scrollbars="none"
-        android:clipToPadding="false"
-        app:layout_constraintTop_toBottomOf="@id/headerDivider">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:padding="4dp"
-            android:background="@drawable/bg_rounded_soft_gray_12dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <!-- Tab 1: All Records -->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/tabLabReports"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:cardBackgroundColor="@color/surface_bg"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp"
-                app:strokeWidth="0dp">
-
-                <TextView
-                    android:id="@+id/tvTabLabReports"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingHorizontal="16dp"
-                    android:text="All Records"
-                    android:textColor="#2F6FED"
-                    android:textSize="14sp" />
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Tab 2: Lab Reports -->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/tabPrescriptions"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="0dp">
-                <TextView
-                    android:id="@+id/tvTabPrescriptions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingHorizontal="16dp"
-                    android:text="Lab Reports"
-                    android:textColor="#64748B"
-                    android:textSize="14sp" />
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Tab 3: Prescriptions -->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/tabDiagnoses"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="0dp">
-                <TextView
-                    android:id="@+id/tvTabDiagnoses"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingHorizontal="16dp"
-                    android:text="Prescriptions"
-                    android:textColor="#64748B"
-                    android:textSize="14sp" />
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Tab 4: Documents -->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/tabDocuments"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="0dp">
-                <TextView
-                    android:id="@+id/tvTabDocuments"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingHorizontal="16dp"
-                    android:text="Documents"
-                    android:textColor="#64748B"
-                    android:textSize="14sp" />
-            </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
-    </HorizontalScrollView>
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="My Health Records"
+        android:textColor="@color/text_dark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerDivider" />
 
     <!-- Main Content Area -->
     <androidx.recyclerview.widget.RecyclerView
@@ -170,7 +85,7 @@
         android:paddingBottom="100dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@id/bottomNav"
-        app:layout_constraintTop_toBottomOf="@id/hsvTabs" />
+        app:layout_constraintTop_toBottomOf="@id/tvSectionLabel" />
 
     <!-- Empty State -->
     <LinearLayout
@@ -182,7 +97,7 @@
         android:padding="20dp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/bottomNav"
-        app:layout_constraintTop_toBottomOf="@id/hsvTabs">
+        app:layout_constraintTop_toBottomOf="@id/tvSectionLabel">
 
         <ImageView
             android:layout_width="100dp"
@@ -195,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="No medical records uploaded yet."
-            android:textColor="#1E293B"
+            android:textColor="@color/text_dark"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -206,7 +121,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="Your medical history will appear here once uploaded."
-            android:textColor="#64748B"
+            android:textColor="@color/text_grey"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -243,7 +158,7 @@
             app:iconGravity="textStart"
             app:iconPadding="8dp"
             app:cornerRadius="12dp"
-            app:backgroundTint="#2F6FED" />
+            app:backgroundTint="@color/primary_blue" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRequestRecord"
@@ -263,7 +178,7 @@
             android:textColor="@color/primary_blue"
             app:strokeColor="@color/primary_blue"
             app:strokeWidth="1dp"
-            app:backgroundTint="@color/white" />
+            app:backgroundTint="@color/surface_bg" />
     </LinearLayout>
 
     <!-- Bottom Navigation Layout Matching App Context -->

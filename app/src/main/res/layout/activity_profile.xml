@@ -186,58 +186,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Section 2 -->
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/surface_bg"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="2dp"
-                    app:strokeWidth="0dp"
-                    android:layout_marginBottom="16dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:paddingVertical="8dp">
-
-                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:clickable="true" android:focusable="true">
-                            <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_rounded_soft_gray_12dp">
-                                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_globe" app:tint="@color/text_secondary" android:layout_gravity="center"/>
-                            </FrameLayout>
-                            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Language" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold" android:layout_marginStart="16dp"/>
-                                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_chevron_right" app:tint="@color/text_muted"/>
-                        </LinearLayout>
-                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_color" android:layout_marginHorizontal="20dp"/>
-
-                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
-                            <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_rounded_soft_gray_12dp">
-                                <ImageView android:id="@+id/ivDarkModeIcon" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_light_mode" app:tint="@color/text_secondary" android:layout_gravity="center"/>
-                            </FrameLayout>
-                            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Dark Mode" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold" android:layout_marginStart="16dp"/>
-                            <com.google.android.material.switchmaterial.SwitchMaterial
-                                android:id="@+id/swDarkMode"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:checked="false"
-                                app:useMaterialThemeColors="true"/>
-                        </LinearLayout>
-                        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider_color" android:layout_marginHorizontal="20dp"/>
-
-                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
-                            <com.simats.tmapp.BiometricIcon
-                                android:layout_width="40dp"
-                                android:layout_height="40dp" />
-                            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Biometric Login" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold" android:layout_marginStart="16dp"/>
-                            <com.google.android.material.switchmaterial.SwitchMaterial
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:checked="true"
-                                app:useMaterialThemeColors="true"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
 
                 <!-- Section 3 -->
                 <com.google.android.material.card.MaterialCardView

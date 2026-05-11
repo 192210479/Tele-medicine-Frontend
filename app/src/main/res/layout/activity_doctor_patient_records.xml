@@ -38,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="Patient Records"
+                    android:text="Shared Medical Records"
                     android:textColor="@color/text_dark"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -215,7 +215,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="No medical records shared yet"
+            android:text="No shared records yet"
             android:textColor="@color/text_dark"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -225,7 +225,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="When a patient shares reports, they will appear here."
+            android:text="Any records or documents shared by this patient will appear here."
             android:textColor="@color/text_grey"
             android:textSize="14sp" />
     </LinearLayout>

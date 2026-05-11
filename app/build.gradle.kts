@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.simats.tmapp"
+    namespace = "com.simats.Tmapp"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.simats.tmapp"
+        applicationId = "com.simats.Tmapp"
         minSdk = 25
         targetSdk = 36
         versionCode = 1
@@ -28,16 +28,22 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
     }
 }
 
 dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -48,7 +54,7 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.gson)
-    
+
     // OkHttp for Multipart/File handling
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
@@ -73,4 +79,10 @@ dependencies {
 
     // MPAndroidChart
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    // Razorpay Integration
+    implementation("com.razorpay:checkout:1.6.33") {
+        exclude(group = "com.razorpay", module = "standard-core")
+        exclude(group = "com.razorpay", module = "core")
+    }
 }

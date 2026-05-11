@@ -25,7 +25,6 @@
     <string name="auth_bullet_3">Secure Medical Records</string>
     <string name="login">Login</string>
     <string name="create_account">Create Account</string>
-    <string name="continue_guest">Continue as Guest</string>
     <string name="welcome_back">Welcome Back</string>
     <string name="sign_in_desc">Sign in to access your health dashboard</string>
     <string name="email_address">Email Address</string>

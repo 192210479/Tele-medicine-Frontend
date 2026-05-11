@@ -115,6 +115,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="16dp">
                     <TextView
+                        android:id="@+id/tvFeature1Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Accessible Healthcare"
@@ -123,9 +124,10 @@
                         android:textStyle="bold"
                         android:layout_marginBottom="6dp"/>
                     <TextView
+                        android:id="@+id/tvFeature1Desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Connect with top doctors from anywhere in the world, anytime you need."
+                        android:text="Connect with trusted healthcare services anytime, anywhere."
                         android:textColor="@color/text_grey"
                         android:textSize="13sp"
                         android:lineSpacingExtra="4dp"/>
@@ -157,6 +159,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="16dp">
                     <TextView
+                        android:id="@+id/tvFeature2Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Secure &amp; Private"
@@ -165,9 +168,10 @@
                         android:textStyle="bold"
                         android:layout_marginBottom="6dp"/>
                     <TextView
+                        android:id="@+id/tvFeature2Desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Your health data is encrypted and protected with enterprise-grade security."
+                        android:text="Your data, consultations, and records are protected with secure access controls."
                         android:textColor="@color/text_grey"
                         android:textSize="13sp"
                         android:lineSpacingExtra="4dp"/>
@@ -199,17 +203,19 @@
                     android:orientation="vertical"
                     android:layout_marginStart="16dp">
                     <TextView
+                        android:id="@+id/tvFeature3Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Patient First"
+                        android:text="Patient-Centered Experience"
                         android:textColor="@color/text_dark"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="6dp"/>
                     <TextView
+                        android:id="@+id/tvFeature3Desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Designed with care to provide the best possible healthcare experience."
+                        android:text="Designed to simplify appointments, consultations, records, and follow-ups."
                         android:textColor="@color/text_grey"
                         android:textSize="13sp"
                         android:lineSpacingExtra="4dp"/>

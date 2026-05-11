@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintBottom_toTopOf="@id/btnCreatePrescription"
+        app:layout_constraintBottom_toTopOf="@id/btnSendPrescription"
         app:layout_constraintTop_toBottomOf="@id/clHeader">
 
         <LinearLayout
